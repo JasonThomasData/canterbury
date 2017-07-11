@@ -1,7 +1,7 @@
 require 'mechanize'
 require 'scraperwiki'
 
-@agent = Mechanize.new
+agent = Mechanize.new
 url = 'http://datrack.canterbury.nsw.gov.au/cgi/datrack.pl?search=search&sortfield=^metadata.date_lodged'
 
 def save_applications(application_list)
@@ -35,7 +35,7 @@ def save_applications(application_list)
 end
 
 puts 'Getting first page'
-application_list = @agent.get(url)
+application_list = agent.get(url)
 save_applications application_list
 
 pageno = 1
