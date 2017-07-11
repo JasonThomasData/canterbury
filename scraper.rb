@@ -18,7 +18,7 @@ def save_applications(application_list)
               row.at('.datrack_street_cell').inner_text + ', ' +
               row.at('.datrack_town_cell').inner_text + ' NSW'
 
-    detail_page = @agent.get info_url
+    detail_page = agent.get info_url
 
     application = {
       council_reference: council_reference,
